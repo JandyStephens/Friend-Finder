@@ -13,9 +13,11 @@ var PORT = process.env.PORT || 9001;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get("/", function(req, res) {
-  res.send("This will be home page");
-});
+var htmlRoutes = require("./routing/htmlRoutes");
+app.use(htmlRoutes);
+
+var apiRoutes = require("./routing/apiRoutes");
+app.use("/api", apiRoutes);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
