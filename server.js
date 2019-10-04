@@ -13,10 +13,10 @@ var PORT = process.env.PORT || 9001;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-var htmlRoutes = require("./routing/htmlRoutes");
+var htmlRoutes = require("./app/routing/htmlRoutes");
 app.use(htmlRoutes);
 
-var apiRoutes = require("./routing/apiRoutes");
+var apiRoutes = require("./app/routing/apiRoutes");
 app.use("/api", apiRoutes);
 
 // Start our server so that it can begin listening to client requests.
