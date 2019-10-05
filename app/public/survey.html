@@ -199,7 +199,7 @@
           ]
         };
         //   TODO:Post request to send new friend object to server
-        $.post("/friends", newFriend).then(function(res) {
+        $.post("/api/friends", newFriend).then(function(res) {
           console.log("survey.html", newFriend);
           console.log("res", res);
         });
