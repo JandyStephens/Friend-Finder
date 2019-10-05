@@ -13,8 +13,6 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </head>
   <body class="text-center">
     <h1>Survey Questions</h1>
@@ -30,60 +28,60 @@
       <container>
         <strong h2>Question 1</strong>
         <h2>I like staying up late</h2>
-        <select>
+        <select id="q1">
           <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-           <option value="5">5 (Strongly Agree)</option>
+          <option value="5">5 (Strongly Agree)</option>
         </select>
       </container>
       <br />
       <container>
         <strong h2>Question 2</strong>
         <h2>I am an introvert</h2>
-        <select>
-         <option value="1">1 (Strongly Disagree)</option>
+        <select id="q2">
+          <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-           <option value="5">5 (Strongly Agree)</option>
+          <option value="5">5 (Strongly Agree)</option>
         </select>
       </container>
       <br />
       <container>
         <strong h2>Question 3</strong>
         <h2>I prefer dogs</h2>
-        <select>
-           <option value="1">1 (Strongly Disagree)</option>
+        <select id="q3">
+          <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-           <option value="5">5 (Strongly Agree)</option>
+          <option value="5">5 (Strongly Agree)</option>
         </select>
       </container>
       <br />
       <container>
         <strong h2>Question 4</strong>
         <h2>I like to push myself out of my comfort zone</h2>
-        <select>
-           <option value="1">1 (Strongly Disagree)</option>
+        <select id="q4">
+          <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-           <option value="5">5 (Strongly Agree)</option>
+          <option value="5">5 (Strongly Agree)</option>
         </select>
       </container>
       <br />
       <container>
         <strong h2>Question 5</strong>
         <h2>I like savory flavors more</h2>
-        <select>
-           <option value="1">1 (Strongly Disagree)</option>
+        <select id="q5">
+          <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-           <option value="5">5 (Strongly Agree)</option>
+          <option value="5">5 (Strongly Agree)</option>
         </select>
       </container>
       <br />
@@ -92,60 +90,60 @@
         <h2>
           I enjoy cooking
         </h2>
-        <select>
-           <option value="1">1 (Strongly Disagree)</option>
+        <select id="q6">
+          <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-           <option value="5">5 (Strongly Agree)</option>
+          <option value="5">5 (Strongly Agree)</option>
         </select>
       </container>
       <br />
       <container>
         <strong h2>Question 7</strong>
         <h2>I like being outdoors</h2>
-        <select>
-    <option value="1">1 (Strongly Disagree)</option>
+        <select id="q7">
+          <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-           <option value="5">5 (Strongly Agree)</option>
+          <option value="5">5 (Strongly Agree)</option>
         </select>
       </container>
       <br />
       <container>
         <strong h2>Question 8</strong>
         <h2>I have a unique sense of style</h2>
-        <select>
-           <option value="1">1 (Strongly Disagree)</option>
+        <select id="q8">
+          <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-           <option value="5">5 (Strongly Agree)</option>
+          <option value="5">5 (Strongly Agree)</option>
         </select>
       </container>
       <br />
       <container>
         <strong h2>Question 9</strong>
         <h2>I prefer tea over coffee</h2>
-        <select
-           <option value="1">1 (Strongly Disagree)</option>
+        <select id="q9">
+          <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-           <option value="5">5 (Strongly Agree)</option>
+          <option value="5">5 (Strongly Agree)</option>
         </select>
       </container>
       <br />
       <container>
         <strong h2>Question 10</strong>
         <h2>I think gifts matter in a relationship</h2>
-        <select>
+        <select id="q10">
           <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-           <option value="5">5 (Strongly Agree)</option>
+          <option value="5">5 (Strongly Agree)</option>
         </select>
       </container>
     </div>
@@ -155,16 +153,57 @@
       </button>
     </div>
     <hr />
-<script>
-    $("#add-btn").click(function(){
-
-    }
-    Event listener on button will construct object with name,photo, and array of scores
-    Update answers to questions
-    Post request to send new friend object to server
-
-
-</script>
-
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+      $("#add-btn").click(function() {
+        event.preventDefault();
+        var newFriend = {
+          name: $("#name-input")
+            .val()
+            .trim(),
+          phone: $("#photo-input")
+            .val()
+            .trim(),
+          scores: [
+            $("#q1")
+              .val()
+              .trim(),
+            $("#q2")
+              .val()
+              .trim(),
+            $("#q3")
+              .val()
+              .trim(),
+            $("#q4")
+              .val()
+              .trim(),
+            $("#q5")
+              .val()
+              .trim(),
+            $("#q6")
+              .val()
+              .trim(),
+            $("#q7")
+              .val()
+              .trim(),
+            $("#q8")
+              .val()
+              .trim(),
+            $("#q9")
+              .val()
+              .trim(),
+            $("#q10")
+              .val()
+              .trim()
+          ]
+        };
+        //   TODO:Post request to send new friend object to server
+        $.post("/friends", newFriend).then(function(res) {
+          console.log("survey.html", newFriend);
+          console.log("res", res);
+        });
+      });
+    </script>
   </body>
 </html>
