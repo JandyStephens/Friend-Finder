@@ -11,7 +11,7 @@ router.get("/friends", function(req, res) {
 //creates new friend data and pushes to friends.js
 router.post("/friends", function(req, res) {
   var newFriend = req.body;
-  console.log(req.body);
+  console.log(req.body.scores);
 
   var bestFriend = {
     name: "",
