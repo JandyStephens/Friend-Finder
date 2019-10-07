@@ -37,13 +37,12 @@ router.post("/friends", function(req, res) {
     }
   });
   console.log(bestMatch);
+
   //Add new user to friends array (on friends.js)
   friends.push(req.body);
   res.json(bestMatch);
 
   // req.body.scores.forEach(eaUserScore)
-
-  // TODO:Take info and display modal
 });
 
 module.exports = router;
