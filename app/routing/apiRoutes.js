@@ -4,7 +4,7 @@ var friends = require("../data/friends.js");
 // console.log(friends);
 
 //serves friends.js page when user requests list of friends
-router.get("/friends", function(req, res) {
+router.get("/view-friends", function(req, res) {
   res.json(friends);
 });
 
@@ -37,14 +37,13 @@ router.post("/friends", function(req, res) {
     }
   });
   console.log(bestMatch);
+  //Add new user to friends array (on friends.js)
+  friends.push(req.body);
+  res.json(bestMatch);
 
   // req.body.scores.forEach(eaUserScore)
 
   // TODO:Take info and display modal
-
-  //TODO:Add new user to friends array (on friends.js)
-  //   friends.push(newFriend);
-  //   res.json(newFriend);
 });
 
 module.exports = router;
