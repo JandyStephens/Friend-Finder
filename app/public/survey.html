@@ -198,6 +198,7 @@
               .trim()
           ]
         };
+
         //Post request to send new friend object to server
         $.post("/api/friends", newFriend).then(function(res) {
           console.log("survey.html", newFriend);

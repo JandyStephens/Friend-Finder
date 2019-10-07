@@ -11,7 +11,7 @@ router.get("/friends", function(req, res) {
 //creates new friend data and pushes to friends.js
 router.post("/friends", function(req, res) {
   var newFriend = req.body;
-  console.log(req.body.scores);
+  // console.log(req.body.scores);
 
   var bestMatch = {
     name: "",
@@ -23,10 +23,12 @@ router.post("/friends", function(req, res) {
   //   friends[i].scores        req.body.scores
   // }
 
+  //Nested for loop, one to go over user and one to go over other scores (inner loop)
+  // Logic to compare existing friends
   friends.forEach(eaFriend => {
     var scoreDifference = 0;
     eaFriend.scores.forEach((eaFriendScore, index) => {
-      scoreDifference += Math.abs(eaFriendScore - res.body.scores[index]);
+      scoreDifference += Math.abs(eaFriendScore - req.body.scores[index]);
     });
     if (scoreDifference < bestMatch.score) {
       //adding new field to object
@@ -34,13 +36,13 @@ router.post("/friends", function(req, res) {
       bestMatch = eaFriend;
     }
   });
+  console.log(bestMatch);
 
   // req.body.scores.forEach(eaUserScore)
 
-  // TODO:Nested for loop, one to go over friends and one to go over scores (inner loop)
-  // Logic to compare existing friends
-  // Take info and display modal
+  // TODO:Take info and display modal
 
+  //TODO:Add new user to friends array (on friends.js)
   //   friends.push(newFriend);
   //   res.json(newFriend);
 });
